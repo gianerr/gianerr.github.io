@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giannah Faith F. Plata | QA Engineer & CS Student</title>
     
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -22,16 +20,16 @@
                     colors: {
                         dark: {
                             50: '#27272a',
-                            100: '#1e1e1e', /* Darker Zinc/Charcoal */
+                            100: '#1e1e1e',
                             200: '#18181b',
-                            300: '#0f172a', /* Slate 900 */
-                            800: '#27272a', /* Zinc 800 */
+                            300: '#0f172a',
+                            800: '#27272a',
                             900: '#18181b',
                         },
                         accent: {
-                            400: '#34d399', /* Emerald 400 */
-                            500: '#10b981', /* Emerald 500 */
-                            600: '#059669', /* Emerald 600 */
+                            400: '#34d399',
+                            500: '#10b981',
+                            600: '#059669',
                         }
                     },
                     animation: {
@@ -54,43 +52,29 @@
         }
     </script>
 
-    <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     
     <style>
         body {
-            background-color: #1e1e1e; /* Dark Charcoal */
-            color: #e2e8f0; /* Slate 200 */
+            background-color: #1e1e1e;
+            color: #e2e8f0;
             overflow-x: hidden;
         }
         
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #1e1e1e;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #3f3f46; /* Zinc 700 */
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #52525b; /* Zinc 600 */
-        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #1e1e1e; }
+        ::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #52525b; }
 
-        /* Glassmorphism Navigation */
         .glass-nav {
             background: rgba(30, 30, 30, 0.85);
             backdrop-filter: blur(16px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        /* Minimal Dark Card */
         .minimal-card {
-            background: rgba(39, 39, 42, 0.4); /* Zinc 800 with opacity */
+            background: rgba(39, 39, 42, 0.4);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.05);
             transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -99,17 +83,16 @@
             background: rgba(39, 39, 42, 0.6);
             transform: translateY(-4px);
             box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.3);
-            border-color: rgba(16, 185, 129, 0.3); /* Emerald border */
+            border-color: rgba(16, 185, 129, 0.3);
         }
 
-        /* Button Styles */
         .btn-primary {
-            background-color: #10b981; /* Emerald 500 */
+            background-color: #10b981;
             color: #ffffff;
             transition: all 0.3s ease;
         }
         .btn-primary:hover {
-            background-color: #059669; /* Emerald 600 */
+            background-color: #059669;
             transform: translateY(-1px);
             box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
         }
@@ -117,7 +100,7 @@
         .btn-secondary {
             background-color: transparent;
             color: #e2e8f0;
-            border: 1px solid #52525b; /* Zinc 600 */
+            border: 1px solid #52525b;
             transition: all 0.3s ease;
         }
         .btn-secondary:hover {
@@ -125,7 +108,6 @@
             background-color: rgba(255, 255, 255, 0.05);
         }
 
-        /* Animated Background - Aurora Effect */
         .aurora-bg {
             position: fixed;
             top: 0;
@@ -150,70 +132,38 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
         .swiper-button-next:hover, .swiper-button-prev:hover {
-            background-color: #10b981; /* Emerald */
+            background-color: #10b981;
             border-color: #10b981;
             box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
             transform: scale(1.1);
         }
-        .swiper-button-next::after, .swiper-button-prev::after {
-            font-size: 18px;
-            font-weight: bold;
-        }
-        .swiper-pagination-bullet {
-            background: #4b5563;
-            opacity: 0.5;
-            width: 10px;
-            height: 10px;
-            transition: all 0.3s ease;
-        }
         .swiper-pagination-bullet-active {
-            background: #10b981; /* Emerald */
-            opacity: 1;
+            background: #10b981;
             width: 24px;
             border-radius: 5px;
         }
 
-        /* Hanging ID Card Animation */
+        /* ID Card Animation */
         @keyframes swing {
             0% { transform: rotate(2deg); }
             50% { transform: rotate(-2deg); }
             100% { transform: rotate(2deg); }
         }
-        
-        .hanging-card-container {
-            transform-origin: top center;
-            animation: swing 5s ease-in-out infinite;
-            cursor: grab;
-        }
-
-        .hanging-card-container:active {
-            cursor: grabbing;
-        }
+        .hanging-card-container { transform-origin: top center; animation: swing 5s ease-in-out infinite; cursor: grab; }
+        .hanging-card-container:active { cursor: grabbing; }
 
         .lanyard-strap {
             width: 14px;
             height: 120px;
-            background: 
-                repeating-linear-gradient(
-                    45deg,
-                    #0f172a,
-                    #0f172a 4px,
-                    #1e293b 4px,
-                    #1e293b 8px
-                );
+            background: repeating-linear-gradient(45deg, #0f172a, #0f172a 4px, #1e293b 4px, #1e293b 8px);
             margin: 0 auto;
             position: relative;
             z-index: 5;
             box-shadow: 2px 0 5px rgba(0,0,0,0.3);
             transition: height 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
             transform-origin: top center;
-            will-change: height;
         }
-
-        .hanging-card-container:hover .lanyard-strap {
-            height: 250px;
-        }
-        
+        .hanging-card-container:hover .lanyard-strap { height: 250px; }
         .lanyard-strap::after {
             content: 'QA ENGINEER';
             position: absolute;
@@ -225,121 +175,22 @@
             font-size: 8px;
             font-weight: bold;
             letter-spacing: 2px;
-            text-shadow: 0 1px 1px rgba(0,0,0,0.5);
         }
 
-        .lanyard-knot {
-            width: 20px;
-            height: 12px;
-            background: linear-gradient(to right, #334155, #475569, #334155);
-            margin: -2px auto 0;
-            position: relative;
-            z-index: 6;
-            border-radius: 2px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        }
+        .lanyard-knot { width: 20px; height: 12px; background: linear-gradient(to right, #334155, #475569, #334155); margin: -2px auto 0; position: relative; z-index: 6; border-radius: 2px; }
+        .id-clip-ring { width: 20px; height: 20px; border: 3px solid #94a3b8; border-radius: 50%; margin: -6px auto -10px; position: relative; z-index: 4; background: linear-gradient(135deg, #cbd5e1 0%, #94a3b8 50%, #64748b 100%); }
+        .id-clip { width: 32px; height: 16px; background: linear-gradient(to bottom, #cbd5e1, #94a3b8); border-radius: 4px 4px 2px 2px; margin: 0 auto -8px auto; position: relative; z-index: 10; display: flex; align-items: center; justify-content: center; }
+        .id-clip::before { content: ''; width: 20px; height: 4px; background: #64748b; border-radius: 2px; }
 
-        .id-clip-ring {
-            width: 20px;
-            height: 20px;
-            border: 3px solid #94a3b8;
-            border-radius: 50%;
-            margin: -6px auto -10px;
-            position: relative;
-            z-index: 4;
-            box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
-            background: linear-gradient(135deg, #cbd5e1 0%, #94a3b8 50%, #64748b 100%);
-        }
-
-        .id-clip {
-            width: 32px;
-            height: 16px;
-            background: linear-gradient(to bottom, #cbd5e1, #94a3b8);
-            border-radius: 4px 4px 2px 2px;
-            margin: 0 auto -8px auto;
-            position: relative;
-            z-index: 10;
-            box-shadow: 
-                0 2px 4px rgba(0,0,0,0.2),
-                inset 0 1px 0 rgba(255,255,255,0.8);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .id-clip::before {
-            content: '';
-            width: 20px;
-            height: 4px;
-            background: #64748b;
-            border-radius: 2px;
-            box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
-        }
-
-        /* Tangible 3D Card Effects */
-        .id-card-wrapper {
-            perspective: 1000px;
-            transform-style: preserve-3d;
-        }
-
-        .id-card {
-            transform-style: preserve-3d;
-            transition: transform 0.1s ease-out;
-            will-change: transform;
-            background: #e2e8f0;
-        }
-
-        .id-card::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(
-                125deg,
-                rgba(255, 255, 255, 0.3) 0%,
-                rgba(255, 255, 255, 0.05) 40%,
-                rgba(255, 255, 255, 0) 41%,
-                rgba(255, 255, 255, 0) 100%
-            );
-            opacity: 0;
-            transition: opacity 0.3s;
-            pointer-events: none;
-            z-index: 50;
-            border-radius: 0.75rem;
-        }
-
-        .hanging-card-container:hover .id-card::after {
-            opacity: 1;
-        }
-
-        /* Plastic Texture */
-        .plastic-texture {
-            position: absolute;
-            inset: 0;
-            opacity: 0.3;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.5'/%3E%3C/svg%3E");
-            mix-blend-mode: overlay;
-            pointer-events: none;
-            z-index: 40;
-        }
-        
-        /* Depth/Thickness Simulation */
-        .id-card::before {
-            content: '';
-            position: absolute;
-            inset: -2px;
-            background: #cbd5e1;
-            transform: translateZ(-2px);
-            border-radius: 14px; /* slightly larger than card radius */
-            z-index: -1;
-        }
+        .id-card-wrapper { perspective: 1000px; transform-style: preserve-3d; }
+        .id-card { transform-style: preserve-3d; transition: transform 0.1s ease-out; will-change: transform; background: #e2e8f0; }
+        .plastic-texture { position: absolute; inset: 0; opacity: 0.3; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.5'/%3E%3C/svg%3E"); mix-blend-mode: overlay; pointer-events: none; z-index: 40; }
     </style>
 </head>
 <body class="antialiased selection:bg-accent-500/30 selection:text-accent-400">
 
-    <!-- Animated Background -->
     <div class="aurora-bg"></div>
 
-    <!-- Navigation -->
     <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
         <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
             <a href="#" class="text-xl font-bold tracking-tight text-white hover:opacity-80 transition-opacity">
@@ -353,459 +204,189 @@
                 <a href="#timeline" class="hover:text-white transition-colors">Certifications</a>
             </div>
 
-            <a href="mailto:platagiannahfaith@gmail.com" class="hidden md:inline-flex items-center px-6 py-2.5 text-sm font-medium text-white bg-accent-600 rounded-lg hover:bg-accent-500 transition-all shadow-md hover:shadow-lg hover:shadow-accent-500/20">
-                Contact Me
-            </a>
+            <div class="flex items-center space-x-5">
+                <a href="https://github.com/gianerr_" target="_blank" class="text-slate-400 hover:text-white transition-colors" title="GitHub Profile">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" /></svg>
+                </a>
+                <a href="mailto:platagiannahfaith@gmail.com" class="hidden md:inline-flex items-center px-6 py-2.5 text-sm font-medium text-white bg-accent-600 rounded-lg hover:bg-accent-500 transition-all shadow-md">
+                    Contact Me
+                </a>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <header id="about" class="min-h-screen flex items-center justify-center pt-28 pb-20 relative overflow-hidden">
         <div class="max-w-6xl mx-auto px-6 w-full relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                
-                <!-- Left Column: Text -->
                 <div data-aos="fade-right" data-aos-duration="1200" class="order-2 lg:order-1 text-center lg:text-left">
-                    <!-- Status Badge -->
-                    <div class="inline-flex items-center px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-slate-300 text-xs font-semibold tracking-wide uppercase shadow-sm mb-8 backdrop-blur-sm">
+                    <div class="inline-flex items-center px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-slate-300 text-xs font-semibold uppercase mb-8 backdrop-blur-sm">
                         <span class="w-2 h-2 rounded-full bg-accent-500 mr-2 animate-pulse"></span>
                         Available for QA Roles
                     </div>
-                    
-                    <!-- Main Headline -->
                     <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white leading-[1.1]">
                         Hi, I'm <br>
                         <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-emerald-600">Giannah Faith.</span>
                     </h1>
-                    
-                    <!-- Subheadline -->
-                    <p class="mt-6 text-xl text-slate-200 font-medium">
-                        Bridging Logic & Quality Assurance.
-                    </p>
-
-                    <!-- Description -->
+                    <p class="mt-6 text-xl text-slate-200 font-medium">Bridging Logic & Quality Assurance.</p>
                     <p class="mt-4 max-w-2xl mx-auto lg:mx-0 text-slate-400 leading-relaxed font-light">
-                        Computer Science student with a strong interest in software quality and user experience. Developing technical skills in application testing and issue identification. Seeking a QA internship to gain hands-on experience, collaborate with a development team, and understand real-world software development processes.
+                        Computer Science student with a strong interest in software quality and user experience. Seeking a QA internship to gain hands-on experience and understand real-world software development processes.
                     </p>
-                    
-                    <!-- CTAs -->
                     <div class="pt-10 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
-                        <a href="#projects" class="px-8 py-3.5 btn-primary rounded-lg text-sm font-semibold">
-                            View Projects
-                        </a>
-                        <a href="https://www.facebook.com/fth.plt/" target="_blank" class="px-8 py-3.5 btn-secondary rounded-lg text-sm font-semibold">
-                            Facebook
-                        </a>
+                        <a href="#projects" class="px-8 py-3.5 btn-primary rounded-lg text-sm font-semibold text-center">View Projects</a>
+                        <a href="https://github.com/gianerr_" target="_blank" class="px-8 py-3.5 btn-secondary rounded-lg text-sm font-semibold text-center">GitHub Profile</a>
                     </div>
                 </div>
 
-                <!-- Right Column: Hanging ID Card -->
                 <div class="order-1 lg:order-2 flex justify-center lg:justify-end relative" data-aos="fade-left" data-aos-duration="1200">
                     <div class="hanging-card-container relative z-20 mt-[-60px] lg:mt-[-100px]">
-                        
-                        <!-- Lanyard Strap -->
-                        <!-- Realistic Lanyard System -->
                         <div class="lanyard-strap"></div>
                         <div class="lanyard-knot"></div>
                         <div class="id-clip-ring"></div>
                         <div class="id-clip"></div>
-
-                        <!-- ID Card -->
                         <div class="id-card-wrapper">
                             <div class="id-card w-[300px] h-[450px] rounded-xl shadow-2xl overflow-hidden border border-slate-300 relative">
-                                <!-- Texture Overlay -->
                                 <div class="plastic-texture"></div>
-
-                                <!-- Lanyard Hole -->
                                 <div class="absolute top-4 left-1/2 transform -translate-x-1/2 w-12 h-2 bg-slate-300 rounded-full z-10 shadow-inner"></div>
-                                
-                                <!-- Card Header -->
                                 <div class="h-24 bg-zinc-900 relative overflow-hidden">
                                     <div class="absolute inset-0 bg-accent-600/20"></div>
                                     <div class="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-[#e2e8f0] to-transparent"></div>
-                                    <div class="absolute top-4 right-4 flex space-x-1">
-                                        <div class="w-2 h-2 rounded-full bg-red-500 shadow-[0_0_5px_rgba(239,68,68,0.6)]"></div>
-                                        <div class="w-2 h-2 rounded-full bg-yellow-500 shadow-[0_0_5px_rgba(234,179,8,0.6)]"></div>
-                                        <div class="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_5px_rgba(34,197,94,0.6)]"></div>
-                                    </div>
                                 </div>
-
-                                <!-- Photo & Info -->
                                 <div class="px-6 pb-8 text-center -mt-12 relative z-20" style="transform: translateZ(20px);">
-                                    <div class="w-28 h-28 mx-auto rounded-full border-4 border-[#e2e8f0] bg-white shadow-lg overflow-hidden mb-4 relative group">
-                                        <div class="absolute inset-0 bg-gradient-to-tr from-transparent to-white/30 pointer-events-none z-10"></div>
-                                        <!-- Profile Picture -->
-                                    <img src="104474880_1582926478532627_6801297857279392692_n.jpg" alt="Giannah Faith" class="w-full h-full object-cover relative z-0">
-                                </div>
-                                    
-                                    <h2 class="text-2xl font-bold text-zinc-800 tracking-tight drop-shadow-sm">Giannah Faith</h2>
-                                    <p class="text-sm font-bold text-accent-600 uppercase tracking-widest mb-1 drop-shadow-sm">Computer Science</p>
+                                    <div class="w-28 h-28 mx-auto rounded-full border-4 border-[#e2e8f0] bg-white shadow-lg overflow-hidden mb-4 relative">
+                                        <img src="104474880_1582926478532627_6801297857279392692_n.jpg" alt="Giannah Faith" class="w-full h-full object-cover">
+                                    </div>
+                                    <h2 class="text-2xl font-bold text-zinc-800 tracking-tight">Giannah Faith</h2>
+                                    <p class="text-sm font-bold text-accent-600 uppercase tracking-widest mb-1">Computer Science</p>
                                     <p class="text-xs text-slate-500 font-mono">Major in Intelligent Systems</p>
-                                    
-                                    <div class="mt-8 border-t border-slate-300/50 pt-4 flex justify-between text-left px-2 bg-white/40 backdrop-blur-sm rounded-lg p-3 shadow-inner">
+                                    <div class="mt-8 border-t border-slate-300/50 pt-4 flex justify-between text-left px-2 bg-white/40 backdrop-blur-sm rounded-lg p-3">
                                         <div>
-                                            <p class="text-[10px] text-slate-500 uppercase font-bold tracking-wider">Department</p>
+                                            <p class="text-[10px] text-slate-500 uppercase font-bold">Department</p>
                                             <p class="text-xs font-bold text-zinc-800">Comp. Science</p>
                                         </div>
                                         <div class="text-right">
-                                            <p class="text-[10px] text-slate-500 uppercase font-bold tracking-wider">Valid Thru</p>
+                                            <p class="text-[10px] text-slate-500 uppercase font-bold">Valid Thru</p>
                                             <p class="text-xs font-bold text-zinc-800">2026</p>
                                         </div>
                                     </div>
-                                    
-                                    <!-- Barcode visual -->
                                     <div class="mt-6 h-8 opacity-60 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxwYXR0ZXJuIGlkPSJwIiB4PSIwIiB5PSIwIiB3aWR0aD0iNCIgaGVpZ2h0PSIxIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMiIgaGVpZ2h0PSIxIiBmaWxsPSIjMDAwIi8+PC9wYXR0ZXJuPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjcCkiLz48L3N2Zz4=')] mix-blend-multiply"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </header>
 
-    <!-- Script for Tangible Tilt Effect -->
-    <script>
-        const cardContainer = document.querySelector('.hanging-card-container');
-        const card = document.querySelector('.id-card');
-
-        cardContainer.addEventListener('mousemove', (e) => {
-            // Stop the swing animation when interacting
-            cardContainer.style.animationPlayState = 'paused';
-
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            // Calculate rotation (max 15 degrees)
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            
-            const rotateX = ((y - centerY) / centerY) * -15; // Invert Y axis for natural tilt
-            const rotateY = ((x - centerX) / centerX) * 15;
-
-            // Apply transform
-            card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
-            
-            // Dynamic Shadow based on tilt
-            const shadowX = -rotateY * 2;
-            const shadowY = rotateX * 2;
-            card.style.boxShadow = `${shadowX}px ${shadowY + 10}px 30px rgba(0,0,0,0.4)`;
-        });
-
-        cardContainer.addEventListener('mouseleave', () => {
-            // Resume swing and reset tilt
-            cardContainer.style.animationPlayState = 'running';
-            card.style.transform = 'rotateX(0) rotateY(0) scale(1)';
-            card.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)';
-        });
-    </script>
-
-    <!-- Technical Expertise (Refined & Modern) -->
     <section id="skills" class="py-32 relative bg-gradient-to-b from-[#121212] via-[#181818] to-[#121212]">
-        <!-- Subtle Vignette/Glow -->
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.03),transparent_70%)] pointer-events-none"></div>
-
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center max-w-3xl mx-auto mb-24" data-aos="fade-up">
-                <h2 class="text-4xl font-bold text-white mb-6 tracking-tight drop-shadow-sm">Technical Expertise</h2>
-                <p class="text-slate-500 font-light text-lg tracking-wide">
-                    Core competencies in <span class="text-slate-300 font-normal">software development</span> and <span class="text-slate-300 font-normal">quality assurance</span>.
-                </p>
+                <h2 class="text-4xl font-bold text-white mb-6">Technical Expertise</h2>
+                <p class="text-slate-500 text-lg">Core competencies in software development and quality assurance.</p>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
-                
-                <!-- Development Card -->
-                <div data-aos="fade-up" data-aos-delay="100" class="group bg-zinc-900/40 backdrop-blur-md rounded-2xl border border-white/5 p-10 hover:bg-zinc-800/60 hover:border-accent-500/30 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 flex flex-col shadow-lg shadow-black/20">
-                    <div class="w-14 h-14 bg-accent-500/5 text-accent-500 rounded-xl flex items-center justify-center mb-8 text-2xl border border-accent-500/10 group-hover:scale-110 group-hover:text-accent-400 group-hover:bg-accent-500/10 transition-all duration-300 shadow-[0_0_15px_rgba(16,185,129,0.1)] group-hover:shadow-[0_0_20px_rgba(16,185,129,0.2)]">
-                        &lt;/&gt;
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-6 tracking-wide group-hover:text-accent-100 transition-colors">Development</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div data-aos="fade-up" data-aos-delay="100" class="group bg-zinc-900/40 backdrop-blur-md rounded-2xl border border-white/5 p-10 hover:border-accent-500/30 transition-all duration-500">
+                    <div class="w-14 h-14 bg-accent-500/5 text-accent-500 rounded-xl flex items-center justify-center mb-8 text-2xl border border-accent-500/10">&lt;/&gt;</div>
+                    <h3 class="text-xl font-bold text-white mb-6">Development</h3>
                     <div class="flex flex-wrap gap-3">
-                        <span class="px-3 py-1.5 bg-white/5 text-slate-300 text-xs font-medium rounded-md border border-white/5 tracking-wide group-hover:bg-accent-500/10 group-hover:text-accent-300 group-hover:border-accent-500/20 transition-colors duration-300">Python</span>
-                        <span class="px-3 py-1.5 bg-white/5 text-slate-300 text-xs font-medium rounded-md border border-white/5 tracking-wide group-hover:bg-accent-500/10 group-hover:text-accent-300 group-hover:border-accent-500/20 transition-colors duration-300">HTML5</span>
-                        <span class="px-3 py-1.5 bg-white/5 text-slate-300 text-xs font-medium rounded-md border border-white/5 tracking-wide group-hover:bg-accent-500/10 group-hover:text-accent-300 group-hover:border-accent-500/20 transition-colors duration-300">JavaScript</span>
-                        <span class="px-3 py-1.5 bg-white/5 text-slate-300 text-xs font-medium rounded-md border border-white/5 tracking-wide group-hover:bg-accent-500/10 group-hover:text-accent-300 group-hover:border-accent-500/20 transition-colors duration-300">CSS3</span>
+                        <span class="px-3 py-1.5 bg-white/5 text-slate-300 text-xs rounded-md">Python</span>
+                        <span class="px-3 py-1.5 bg-white/5 text-slate-300 text-xs rounded-md">HTML5</span>
+                        <span class="px-3 py-1.5 bg-white/5 text-slate-300 text-xs rounded-md">JavaScript</span>
                     </div>
                 </div>
-
-                <!-- Tools & Design Card -->
-                <div data-aos="fade-up" data-aos-delay="200" class="group bg-zinc-900/40 backdrop-blur-md rounded-2xl border border-white/5 p-10 hover:bg-zinc-800/60 hover:border-accent-500/30 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 flex flex-col shadow-lg shadow-black/20">
-                    <div class="w-14 h-14 bg-accent-500/5 text-accent-500 rounded-xl flex items-center justify-center mb-8 text-2xl border border-accent-500/10 group-hover:scale-110 group-hover:text-accent-400 group-hover:bg-accent-500/10 transition-all duration-300 shadow-[0_0_15px_rgba(16,185,129,0.1)] group-hover:shadow-[0_0_20px_rgba(16,185,129,0.2)]">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-6 tracking-wide group-hover:text-accent-100 transition-colors">Tools & Design</h3>
+                <div data-aos="fade-up" data-aos-delay="200" class="group bg-zinc-900/40 backdrop-blur-md rounded-2xl border border-white/5 p-10 hover:border-accent-500/30 transition-all duration-500">
+                    <div class="w-14 h-14 bg-accent-500/5 text-accent-500 rounded-xl flex items-center justify-center mb-8 text-2xl border border-accent-500/10">⚙️</div>
+                    <h3 class="text-xl font-bold text-white mb-6">Tools & Design</h3>
                     <div class="flex flex-wrap gap-3">
-                        <span class="px-3 py-1.5 bg-white/5 text-slate-300 text-xs font-medium rounded-md border border-white/5 tracking-wide group-hover:bg-accent-500/10 group-hover:text-accent-300 group-hover:border-accent-500/20 transition-colors duration-300">Figma</span>
-                        <span class="px-3 py-1.5 bg-white/5 text-slate-300 text-xs font-medium rounded-md border border-white/5 tracking-wide group-hover:bg-accent-500/10 group-hover:text-accent-300 group-hover:border-accent-500/20 transition-colors duration-300">AutoCAD</span>
-                        <span class="px-3 py-1.5 bg-white/5 text-slate-300 text-xs font-medium rounded-md border border-white/5 tracking-wide group-hover:bg-accent-500/10 group-hover:text-accent-300 group-hover:border-accent-500/20 transition-colors duration-300">MS Office</span>
-                        <span class="px-3 py-1.5 bg-white/5 text-slate-300 text-xs font-medium rounded-md border border-white/5 tracking-wide group-hover:bg-accent-500/10 group-hover:text-accent-300 group-hover:border-accent-500/20 transition-colors duration-300">AI Tools</span>
+                        <span class="px-3 py-1.5 bg-white/5 text-slate-300 text-xs rounded-md">Figma</span>
+                        <span class="px-3 py-1.5 bg-white/5 text-slate-300 text-xs rounded-md">AutoCAD</span>
                     </div>
                 </div>
-
-                <!-- QA & Knowledge Card -->
-                <div data-aos="fade-up" data-aos-delay="300" class="group bg-zinc-900/40 backdrop-blur-md rounded-2xl border border-white/5 p-10 hover:bg-zinc-800/60 hover:border-accent-500/30 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 flex flex-col shadow-lg shadow-black/20">
-                    <div class="w-14 h-14 bg-accent-500/5 text-accent-500 rounded-xl flex items-center justify-center mb-8 text-2xl border border-accent-500/10 group-hover:scale-110 group-hover:text-accent-400 group-hover:bg-accent-500/10 transition-all duration-300 shadow-[0_0_15px_rgba(16,185,129,0.1)] group-hover:shadow-[0_0_20px_rgba(16,185,129,0.2)]">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-6 tracking-wide group-hover:text-accent-100 transition-colors">QA & Knowledge</h3>
+                <div data-aos="fade-up" data-aos-delay="300" class="group bg-zinc-900/40 backdrop-blur-md rounded-2xl border border-white/5 p-10 hover:border-accent-500/30 transition-all duration-500">
+                    <div class="w-14 h-14 bg-accent-500/5 text-accent-500 rounded-xl flex items-center justify-center mb-8 text-2xl border border-accent-500/10">✓</div>
+                    <h3 class="text-xl font-bold text-white mb-6">QA & Knowledge</h3>
                     <div class="flex flex-wrap gap-3">
-                        <span class="px-3 py-1.5 bg-white/5 text-slate-300 text-xs font-medium rounded-md border border-white/5 tracking-wide group-hover:bg-accent-500/10 group-hover:text-accent-300 group-hover:border-accent-500/20 transition-colors duration-300">QA Testing</span>
-                        <span class="px-3 py-1.5 bg-white/5 text-slate-300 text-xs font-medium rounded-md border border-white/5 tracking-wide group-hover:bg-accent-500/10 group-hover:text-accent-300 group-hover:border-accent-500/20 transition-colors duration-300">Open RAN</span>
-                        <span class="px-3 py-1.5 bg-white/5 text-slate-300 text-xs font-medium rounded-md border border-white/5 tracking-wide group-hover:bg-accent-500/10 group-hover:text-accent-300 group-hover:border-accent-500/20 transition-colors duration-300">Linux</span>
-                        <span class="px-3 py-1.5 bg-white/5 text-slate-300 text-xs font-medium rounded-md border border-white/5 tracking-wide group-hover:bg-accent-500/10 group-hover:text-accent-300 group-hover:border-accent-500/20 transition-colors duration-300">Security</span>
+                        <span class="px-3 py-1.5 bg-white/5 text-slate-300 text-xs rounded-md">Testing</span>
+                        <span class="px-3 py-1.5 bg-white/5 text-slate-300 text-xs rounded-md">Security</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="py-24">
         <div class="max-w-6xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16" data-aos="fade-up">
-                <div>
-                    <h2 class="text-3xl font-bold text-white mb-2 tracking-tight">Featured Projects</h2>
-                    <p class="text-slate-400">Research and development in intelligent systems.</p>
-                </div>
+            <div class="mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-white mb-2">Featured Projects</h2>
+                <p class="text-slate-400">Click on a project to view details on GitHub.</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                
-                <!-- Project 1 -->
-                <div data-aos="fade-up" class="minimal-card rounded-xl p-8 lg:p-10 relative overflow-hidden group">
-                    <span class="text-xs font-bold text-accent-400 tracking-widest uppercase mb-4 block">Undergraduate Thesis</span>
-                    <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-accent-400 transition-colors">AI-Powered Academic Evaluation</h3>
-                    <p class="text-slate-400 leading-relaxed mb-8 font-light">
-                        An intelligent recommendation engine for BSIT and BSCS programs. It analyzes curriculum data to evaluate program effectiveness and provides actionable insights.
-                    </p>
+                <a href="https://github.com/gianerr_" target="_blank" data-aos="fade-up" class="minimal-card rounded-xl p-8 lg:p-10 relative overflow-hidden group block">
+                    <span class="text-xs font-bold text-accent-400 tracking-widest uppercase mb-4 block">Thesis</span>
+                    <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-accent-400 transition-colors">AI-Powered Evaluation</h3>
+                    <p class="text-slate-400 leading-relaxed mb-8 font-light">An intelligent recommendation engine for BSIT and BSCS programs.</p>
                     <div class="flex flex-wrap gap-3 mt-auto">
-                        <span class="px-3 py-1 bg-white/5 border border-white/10 text-slate-300 text-xs font-medium rounded-full">Python</span>
-                        <span class="px-3 py-1 bg-white/5 border border-white/10 text-slate-300 text-xs font-medium rounded-full">Machine Learning</span>
-                        <span class="px-3 py-1 bg-white/5 border border-white/10 text-slate-300 text-xs font-medium rounded-full">Data Analysis</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 text-slate-300 text-xs rounded-full">Python</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 text-slate-300 text-xs rounded-full">ML</span>
                     </div>
-                </div>
+                    <div class="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-all transform translate-x-2 group-hover:translate-x-0">
+                        <svg class="w-6 h-6 text-accent-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </div>
+                </a>
 
-                <!-- Project 2 -->
-                <div data-aos="fade-up" data-aos-delay="100" class="minimal-card rounded-xl p-8 lg:p-10 relative overflow-hidden group">
+                <a href="https://github.com/gianerr_" target="_blank" data-aos="fade-up" data-aos-delay="100" class="minimal-card rounded-xl p-8 lg:p-10 relative overflow-hidden group block">
                     <span class="text-xs font-bold text-accent-400 tracking-widest uppercase mb-4 block">Research</span>
                     <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-accent-400 transition-colors">Non-Invasive Age Estimation</h3>
-                    <p class="text-slate-400 leading-relaxed mb-8 font-light">
-                        Applying Machine Learning techniques to estimate the age of <i>Parashorea Malaanonan</i> trees without physical damage, promoting sustainable forestry.
-                    </p>
+                    <p class="text-slate-400 leading-relaxed mb-8 font-light">Machine Learning techniques to estimate the age of trees without damage.</p>
                     <div class="flex flex-wrap gap-3 mt-auto">
-                        <span class="px-3 py-1 bg-white/5 border border-white/10 text-slate-300 text-xs font-medium rounded-full">ML Algorithms</span>
-                        <span class="px-3 py-1 bg-white/5 border border-white/10 text-slate-300 text-xs font-medium rounded-full">Sustainability</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 text-slate-300 text-xs rounded-full">Data Science</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 text-slate-300 text-xs rounded-full">Sustainability</span>
                     </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div data-aos="fade-up" data-aos-delay="200" class="minimal-card rounded-xl p-8 lg:col-span-2 flex flex-col md:flex-row items-center justify-between gap-8">
-                    <div>
-                        <span class="text-xs font-bold text-accent-400 tracking-widest uppercase mb-2 block">Research • LBSHS</span>
-                        <h3 class="text-xl font-bold text-white mb-2">Agricultural Efficacy Study</h3>
-                        <p class="text-slate-400 text-sm max-w-2xl font-light">
-                            Investigated the combined efficacy of Ammonium Phosphate and Fish Waste as fertilizer for <i>Brassica Rapa</i> (Pechay).
-                        </p>
+                    <div class="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-all transform translate-x-2 group-hover:translate-x-0">
+                        <svg class="w-6 h-6 text-accent-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                     </div>
-                    <div class="flex-shrink-0">
-                         <span class="px-4 py-2 bg-white/5 text-slate-300 text-xs font-bold rounded-lg border border-white/10">Completed</span>
-                    </div>
-                </div>
-
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Certifications (Swiper Carousel) -->
-    <section id="timeline" class="py-24 relative overflow-hidden bg-white/5">
+    <section id="timeline" class="py-24 bg-white/5">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">My Certifications</h2>
-                <div class="h-1 w-20 bg-gradient-to-r from-accent-500 to-emerald-700 mx-auto rounded-full mb-6"></div>
-                <p class="text-slate-400">A collection of my professional certifications and achievements.</p>
+                <h2 class="text-3xl font-bold text-white mb-4">Certifications</h2>
+                <div class="h-1 w-20 bg-accent-500 mx-auto rounded-full"></div>
             </div>
-
-            <!-- Swiper -->
-            <div class="swiper mySwiper !pb-14 !px-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper mySwiper !pb-14 !px-4">
                 <div class="swiper-wrapper">
-
-                    <!-- Slide: AI/ML -->
                     <div class="swiper-slide h-auto">
-                        <div class="bg-zinc-800/50 backdrop-blur-md rounded-2xl border border-white/5 overflow-hidden hover:border-accent-500/30 transition-all duration-300 h-full flex flex-col group shadow-lg">
-                            <div class="h-56 bg-zinc-900 relative flex items-center justify-center overflow-hidden">
-                                 <!-- Feature Image -->
-                                 <img src="ai-ml-cert.png" alt="Artificial Intelligence/Machine Learning Certificate" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500">
-                                 
-                                 <!-- Subtle Overlay for text readability -->
-                                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-
-                                 <div class="absolute bottom-4 left-0 right-0 text-center">
-                                    <span class="px-3 py-1 bg-violet-600/90 text-white text-xs font-bold uppercase rounded-full border border-violet-400/30 shadow-lg backdrop-blur-sm">AI & ML</span>
+                        <div class="bg-zinc-800/50 rounded-2xl border border-white/5 overflow-hidden h-full flex flex-col group">
+                            <div class="h-56 bg-zinc-900 relative flex items-center justify-center">
+                                <img src="ai-ml-cert.png" alt="AI Cert" class="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-all duration-500">
+                                <div class="absolute bottom-4 left-0 right-0 text-center">
+                                    <span class="px-3 py-1 bg-violet-600 text-white text-xs font-bold rounded-full">AI & ML</span>
                                 </div>
                             </div>
-                            <div class="p-8 flex-1 flex flex-col border-t border-white/5 bg-[#18181b]">
-                                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-accent-400 transition-colors leading-tight">Artificial Intelligence/Machine Learning</h3>
-                                <p class="text-slate-400 text-sm mt-auto font-medium">Issued by Asia O-RAN Academy</p>
-                                <p class="text-slate-500 text-xs mt-1">Dec 14, 2024</p>
+                            <div class="p-8 flex-1 bg-[#18181b]">
+                                <h3 class="text-xl font-bold text-white mb-3">Artificial Intelligence</h3>
+                                <p class="text-slate-400 text-sm">Asia O-RAN Academy</p>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Slide: Open RAN Security -->
                     <div class="swiper-slide h-auto">
-                        <div class="bg-zinc-800/50 backdrop-blur-md rounded-2xl border border-white/5 overflow-hidden hover:border-accent-500/30 transition-all duration-300 h-full flex flex-col group shadow-lg">
-                            <div class="h-56 bg-zinc-900 relative flex items-center justify-center overflow-hidden">
-                                 <!-- Feature Image -->
-                                 <img src="open-ran.png" alt="Open RAN Security Certificate" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500">
-                                 
-                                 <!-- Subtle Overlay for text readability -->
-                                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-
-                                 <div class="absolute bottom-4 left-0 right-0 text-center">
-                                    <span class="px-3 py-1 bg-red-600/90 text-white text-xs font-bold uppercase rounded-full border border-red-400/30 shadow-lg backdrop-blur-sm">Security</span>
+                        <div class="bg-zinc-800/50 rounded-2xl border border-white/5 overflow-hidden h-full flex flex-col group">
+                            <div class="h-56 bg-zinc-900 relative flex items-center justify-center">
+                                <img src="figma-cert.png" alt="Figma Cert" class="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-all duration-500">
+                                <div class="absolute bottom-4 left-0 right-0 text-center">
+                                    <span class="px-3 py-1 bg-pink-600 text-white text-xs font-bold rounded-full">Design</span>
                                 </div>
                             </div>
-                            <div class="p-8 flex-1 flex flex-col border-t border-white/5 bg-[#18181b]">
-                                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-accent-400 transition-colors leading-tight">Open RAN Security</h3>
-                                <p class="text-slate-400 text-sm mt-auto font-medium">Issued by Asia O-RAN Academy</p>
-                                <p class="text-slate-500 text-xs mt-1">Dec 7, 2024</p>
+                            <div class="p-8 flex-1 bg-[#18181b]">
+                                <h3 class="text-xl font-bold text-white mb-3">Designing with Figma</h3>
+                                <p class="text-slate-400 text-sm">DICT Bataan</p>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Slide: Linux Fundamentals -->
-                    <div class="swiper-slide h-auto">
-                        <div class="bg-zinc-800/50 backdrop-blur-md rounded-2xl border border-white/5 overflow-hidden hover:border-accent-500/30 transition-all duration-300 h-full flex flex-col group shadow-lg">
-                            <div class="h-56 bg-zinc-900 relative flex items-center justify-center overflow-hidden">
-                                 <!-- Feature Image -->
-                                 <img src="linux.png" alt="Linux Fundamentals Certificate" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500">
-                                 
-                                 <!-- Subtle Overlay for text readability -->
-                                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-
-                                 <div class="absolute bottom-4 left-0 right-0 text-center">
-                                    <span class="px-3 py-1 bg-yellow-600/90 text-white text-xs font-bold uppercase rounded-full border border-yellow-400/30 shadow-lg backdrop-blur-sm">System Admin</span>
-                                </div>
-                            </div>
-                            <div class="p-8 flex-1 flex flex-col border-t border-white/5 bg-[#18181b]">
-                                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-accent-400 transition-colors leading-tight">Linux Fundamentals</h3>
-                                <p class="text-slate-400 text-sm mt-auto font-medium">Issued by Asia O-RAN Academy</p>
-                                <p class="text-slate-500 text-xs mt-1">Nov 30, 2024</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide: Open RAN -->
-                    <div class="swiper-slide h-auto">
-                        <div class="bg-zinc-800/50 backdrop-blur-md rounded-2xl border border-white/5 overflow-hidden hover:border-accent-500/30 transition-all duration-300 h-full flex flex-col group shadow-lg">
-                            <div class="h-56 bg-zinc-900 relative flex items-center justify-center overflow-hidden">
-                                 <!-- Feature Image -->
-                                 <img src="oran-cert.png" alt="Introduction to RAN, 5G, and Open RAN Certificate" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500">
-                                 
-                                 <!-- Subtle Overlay for text readability -->
-                                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-
-                                 <div class="absolute bottom-4 left-0 right-0 text-center">
-                                    <span class="px-3 py-1 bg-emerald-600/90 text-white text-xs font-bold uppercase rounded-full border border-emerald-400/30 shadow-lg backdrop-blur-sm">Telecom</span>
-                                </div>
-                            </div>
-                            <div class="p-8 flex-1 flex flex-col border-t border-white/5 bg-[#18181b]">
-                                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-accent-400 transition-colors leading-tight">Introduction to RAN, 5G, and Open RAN</h3>
-                                <p class="text-slate-400 text-sm mt-auto font-medium">Issued by Asia O-RAN Academy</p>
-                                <p class="text-slate-500 text-xs mt-1">Nov 23, 2024</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <!-- Slide 2: Data Privacy -->
-                    <div class="swiper-slide h-auto">
-                        <div class="bg-zinc-800/50 backdrop-blur-md rounded-2xl border border-white/5 overflow-hidden hover:border-accent-500/30 transition-all duration-300 h-full flex flex-col group shadow-lg">
-                            <div class="h-56 bg-zinc-900 relative flex items-center justify-center overflow-hidden">
-                                 <!-- Feature Image -->
-                                 <img src="data-privacy-cert.png" alt="Data Privacy Awareness Certificate" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500">
-                                 
-                                 <!-- Subtle Overlay for text readability -->
-                                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-
-                                 <div class="absolute bottom-4 left-0 right-0 text-center">
-                                    <span class="px-3 py-1 bg-blue-600/90 text-white text-xs font-bold uppercase rounded-full border border-blue-400/30 shadow-lg backdrop-blur-sm">Security</span>
-                                </div>
-                            </div>
-                            <div class="p-8 flex-1 flex flex-col border-t border-white/5 bg-[#18181b]">
-                                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-accent-400 transition-colors leading-tight">Data Privacy Awareness</h3>
-                                <p class="text-slate-400 text-sm mt-auto font-medium">Issued by DICT Region X</p>
-                                <p class="text-slate-500 text-xs mt-1">Nov 17, 2025</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 3: Robotics -->
-                    <div class="swiper-slide h-auto">
-                        <div class="bg-zinc-800/50 backdrop-blur-md rounded-2xl border border-white/5 overflow-hidden hover:border-accent-500/30 transition-all duration-300 h-full flex flex-col group shadow-lg">
-                            <div class="h-56 bg-gradient-to-br from-purple-900/30 to-black relative flex items-center justify-center overflow-hidden">
-                                 <div class="absolute inset-0 bg-black/40"></div>
-                                 <svg class="w-20 h-20 text-purple-500/20 group-hover:text-purple-500/40 group-hover:scale-110 transition-all duration-500 relative z-10" fill="currentColor" viewBox="0 0 24 24"><path d="M22 11V9h-2V7h-2V5h-2V3h-2V1h-2v2H8V1H6v2H4v2H2v2H0v2H2v2h2v2h2v2h2v2h2v2h2v-2h2v-2h2v-2h2v-2h2v-2h-2zm-10 7H8v-2h4v2zm0-4H8v-2h4v2z"></path></svg>
-                                 <div class="absolute bottom-4 left-0 right-0 text-center">
-                                    <span class="px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-bold uppercase rounded-full border border-purple-500/20">Competition</span>
-                                </div>
-                            </div>
-                            <div class="p-8 flex-1 flex flex-col border-t border-white/5 bg-[#18181b]">
-                                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-accent-400 transition-colors leading-tight">CCS Robotics Competition</h3>
-                                <p class="text-slate-400 text-sm mt-auto font-medium">Issued by CCS Department</p>
-                                <p class="text-slate-500 text-xs mt-1">July 30, 2025</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide: Figma -->
-                    <div class="swiper-slide h-auto">
-                        <div class="bg-zinc-800/50 backdrop-blur-md rounded-2xl border border-white/5 overflow-hidden hover:border-accent-500/30 transition-all duration-300 h-full flex flex-col group shadow-lg">
-                            <div class="h-56 bg-zinc-900 relative flex items-center justify-center overflow-hidden">
-                                 <!-- Feature Image -->
-                                 <img src="figma-cert.png" alt="Designing with Figma Certificate" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500">
-                                 
-                                 <!-- Subtle Overlay for text readability -->
-                                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-
-                                 <div class="absolute bottom-4 left-0 right-0 text-center">
-                                    <span class="px-3 py-1 bg-pink-600/90 text-white text-xs font-bold uppercase rounded-full border border-pink-400/30 shadow-lg backdrop-blur-sm">Design</span>
-                                </div>
-                            </div>
-                            <div class="p-8 flex-1 flex flex-col border-t border-white/5 bg-[#18181b]">
-                                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-accent-400 transition-colors leading-tight">Designing with Figma: From Concept to Creation</h3>
-                                <p class="text-slate-400 text-sm mt-auto font-medium">Issued by DICT Bataan</p>
-                                <p class="text-slate-500 text-xs mt-1">Oct 8, 2024</p>
-                            </div>
-                        </div>
-                    </div>
-
-                     <!-- Slide 5: Hardware -->
-                    <div class="swiper-slide h-auto">
-                        <div class="bg-zinc-800/50 backdrop-blur-md rounded-2xl border border-white/5 overflow-hidden hover:border-accent-500/30 transition-all duration-300 h-full flex flex-col group shadow-lg">
-                            <div class="h-56 bg-zinc-900 relative flex items-center justify-center overflow-hidden">
-                                 <!-- Feature Image -->
-                                 <img src="hardware-cert.png" alt="Computer Hardware Basics Certificate" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500">
-                                 
-                                 <!-- Subtle Overlay for text readability -->
-                                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-
-                                 <div class="absolute bottom-4 left-0 right-0 text-center">
-                                    <span class="px-3 py-1 bg-cyan-600/90 text-white text-xs font-bold uppercase rounded-full border border-cyan-400/30 shadow-lg backdrop-blur-sm">Technical</span>
-                                </div>
-                            </div>
-                            <div class="p-8 flex-1 flex flex-col border-t border-white/5 bg-[#18181b]">
-                                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-accent-400 transition-colors leading-tight">Computer Hardware Basics</h3>
-                                <p class="text-slate-400 text-sm mt-auto font-medium">Issued by Cisco Academy</p>
-                                <p class="text-slate-500 text-xs mt-1">May 28, 2025</p>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
@@ -814,49 +395,6 @@
         </div>
     </section>
 
-    <!-- Swiper JS & Init -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            loop: true,
-            centeredSlides: true,
-            autoplay: {
-                delay: 3500,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            breakpoints: {
-                640: {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                    centeredSlides: true,
-                },
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 30,
-                    centeredSlides: false,
-                },
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                    centeredSlides: false,
-                },
-            },
-        });
-    </script>
-
-   
-
-    <!-- Footer -->
     <footer class="py-12 border-t border-white/5 bg-dark-200">
         <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="text-center md:text-left">
@@ -864,26 +402,51 @@
                 <p class="text-slate-500 text-sm">QA Engineer & CS Student</p>
             </div>
             <div class="flex space-x-6">
+                <a href="https://github.com/gianerr_" target="_blank" class="text-slate-400 hover:text-white transition-colors">
+                    <span class="sr-only">GitHub</span>
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                </a>
                 <a href="mailto:platagiannahfaith@gmail.com" class="text-slate-400 hover:text-white transition-colors">
-                    <span class="sr-only">Email</span>
                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                 </a>
                 <a href="https://www.facebook.com/fth.plt/" class="text-slate-400 hover:text-white transition-colors">
-                    <span class="sr-only">Facebook</span>
                     <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                 </a>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        AOS.init({
-            once: true,
-            offset: 40,
-            duration: 800,
-            easing: 'ease-out-cubic',
+        AOS.init({ once: true, duration: 800 });
+        
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: { delay: 3500 },
+            pagination: { el: ".swiper-pagination", clickable: true },
+            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+            breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
+        });
+
+        const cardContainer = document.querySelector('.hanging-card-container');
+        const card = document.querySelector('.id-card');
+        cardContainer.addEventListener('mousemove', (e) => {
+            cardContainer.style.animationPlayState = 'paused';
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const rotateX = ((y - centerY) / centerY) * -15;
+            const rotateY = ((x - centerX) / centerX) * 15;
+            card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+        });
+        cardContainer.addEventListener('mouseleave', () => {
+            cardContainer.style.animationPlayState = 'running';
+            card.style.transform = 'rotateX(0) rotateY(0) scale(1)';
         });
     </script>
 </body>
